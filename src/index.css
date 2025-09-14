@@ -156,16 +156,22 @@ Modern, clean design with professional blue-grey palette
   
   .skill-bar {
     position: relative;
-    background: hsl(var(--muted));
-    border-radius: var(--radius);
+    background: hsl(var(--muted) / 0.3);
+    border-radius: 9999px;
     overflow: hidden;
   }
   
   .skill-progress {
-    height: 8px;
-    background: var(--gradient-primary);
-    border-radius: var(--radius);
-    transition: width 1s ease-out;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 9999px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Shimmer Animation */
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
   }
   
   /* Professional Navigation */
@@ -210,6 +216,15 @@ Modern, clean design with professional blue-grey palette
   
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
