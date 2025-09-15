@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, MessageCircle, Sparkles, Heart } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,6 +16,11 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  // Initialize EmailJS once
+  useEffect(() => {
+    emailjs.init('K6p5opcmyC3aaPTpx');
+  }, []);
 
   const contactInfo = [
     {
@@ -84,10 +89,14 @@ const Contact = () => {
         setFormData({ name: '', email: '', message: '' });
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      const err = error as any;
+      console.error('EmailJS Error:', err);
+      const isRecipientErr = err?.status === 422 && String(err?.text || '').toLowerCase().includes('recipient');
       toast({
-        title: "Failed to Send Message",
-        description: "Please try again or contact me directly via email.",
+        title: isRecipientErr ? "Email configuration issue" : "Failed to Send Message",
+        description: isRecipientErr
+          ? "Recipient email is not set in EmailJS. In your EmailJS template, set 'To email' to your Gmail or to {{to_email}}."
+          : "Please try again or contact me directly via email.",
         variant: "destructive",
       });
     } finally {
