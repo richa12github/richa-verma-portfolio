@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Dehradun, Uttarakhand",
+      value: "Noida, UP",
       href: "#",
       color: "text-orange-500"
     },
