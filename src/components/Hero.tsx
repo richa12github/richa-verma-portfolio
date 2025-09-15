@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import richaProfile from '@/assets/richa-profile.jpg';
+import richaProfile from '@/assets/richa-profile-new.jpg';
 
 const Hero = () => {
   return (
