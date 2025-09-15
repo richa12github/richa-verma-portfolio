@@ -67,6 +67,10 @@ const Contact = () => {
         {
           from_name: formData.name,
           from_email: formData.email,
+          reply_to: formData.email,
+          to_name: 'Richa Verma',
+          to_email: 'richavermaddn12@gmail.com', // Recipient
+          subject: 'New message from portfolio contact form',
           message: formData.message,
         },
         'K6p5opcmyC3aaPTpx' // Public Key
