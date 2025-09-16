@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 const About = () => {
   const education = [
     {
-      degree: "B-Tech, Computer Science & Engineering",
+      degree: "B-Tech, CSE",
       institution: "Uttaranchal University, Dehradun",
       duration: "2021-2025",
       grade: "CGPA 8.51",
@@ -55,11 +55,11 @@ const About = () => {
             <Star className="w-4 h-4" />
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            About Me
+            Fresher graduate in B-tech CSE, specialized in Artificial Intelligence and machine language
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A passionate Computer Science graduate in data analytics, machine learning, 
-            and business intelligence. Ready to transform raw data into strategic business insights.
+            Also passionate in Business Analyst | Data Analyst | Project Management | AI & ML enthusiastic with hands-on projects also skilled in Advanced Excel, Python, SQL and Power-BI with strong foundation in statistical analysis. 
+            Ready to transform raw data into static business insights.
           </p>
         </div>
 

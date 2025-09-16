@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-            Passionate fresher graduate in Computer Science with hands-on experience in 
+            Passionate fresher graduate in CSE with hands-on experience in 
             data analytics, visualization, and AI/ML. Certified by Deloitte and TATA, 
             ready to drive data-driven insights and innovation.
           </p>
