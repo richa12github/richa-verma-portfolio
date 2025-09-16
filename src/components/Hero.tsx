@@ -33,10 +33,12 @@ const Hero = () => {
               </Button>
             </Link>
             
-            <Button variant="outline" size="lg" className="hover-lift">
-              <Download className="mr-2" size={20} />
-              Download CV
-            </Button>
+            <a href="/Richa_Verma_Resume.pdf" download="Richa_Verma_Resume.pdf">
+              <Button variant="outline" size="lg" className="hover-lift">
+                <Download className="mr-2" size={20} />
+                Download CV
+              </Button>
+            </a>
           </div>
 
           {/* Contact Links */}
