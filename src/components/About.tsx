@@ -58,7 +58,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A passionate Computer Science graduate with expertise in data analytics, machine learning, 
+            A passionate Computer Science graduate in data analytics, machine learning, 
             and business intelligence. Ready to transform raw data into strategic business insights.
           </p>
         </div>
